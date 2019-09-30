@@ -14,10 +14,13 @@ with urllib.request.urlopen(url) as url:
 
 realurl = "https://mixer.com/api/v1/users/" + str(data["userId"])
 
+fo = open("fallback.json", "w")
 with urllib.request.urlopen(realurl) as url:
 
 
     data = json.loads(url.read().decode())
+fo.write(str(data))
+fo.close()
 
 print ('')   	
 print ('-- Mixer Account Tracker --')
