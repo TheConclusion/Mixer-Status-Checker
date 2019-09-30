@@ -21,6 +21,8 @@ REM Make sure to have a recent version of python istalled [3.0 or higher]
 
 setup.py
 
+:START
+
 cls
 
 REM Insert the core.py file location below (Make sure not to move this file)
