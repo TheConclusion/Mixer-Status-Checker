@@ -4,7 +4,7 @@ goto LOAD
 
 :START
 
-[insert mixer.py file path here] 
+[insert setup.py file path here] 
 
 TIMEOUT /T 60
 
