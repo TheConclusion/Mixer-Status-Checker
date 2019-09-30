@@ -1,9 +1,19 @@
+import os, time
+import importlib
 import urllib.request, json 
-with urllib.request.urlopen("http://mixer.com/api/v1/users/[user id]") as url:
+
+fo = open("config.txt", "r+")
+name = fo.read(10);
+
+url = "https://mixer.com/api/v1/channels/" + (name)
+
+fo.close()
+
+with urllib.request.urlopen(url) as url:
     data = json.loads(url.read().decode())
-    
-# insert user id you whish to track above in the [user id] part
-# Make sure to remove the brackets as well
+
+realurl = "https://mixer.com/api/v1/users/" + str(data["userId"])
+
 
 print ('')   	
 print ('-- Mixer Account Tracker --')
