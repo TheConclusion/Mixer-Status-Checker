@@ -2,6 +2,14 @@
 
 title Mixer - Data Dashboard
 
+REM checks if autorun file exist (if the autorun function has been enabled and redirects from there)
+
+if exist autorun.txt (
+goto :START
+) else (
+goto :MAIN
+)
+
 @echo. 
 @echo  -- Mixer Account Tracker --
 @echo        Motd/Bulletin
