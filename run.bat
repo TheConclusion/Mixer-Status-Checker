@@ -2,13 +2,13 @@
 
 title Mixer - Data Dashboard
 
-REM checks if autorun file exist (if the autorun function has been enabled and redirects from there)
-
 if exist autorun.txt (
 goto :START
 ) else (
 goto :MAIN
 )
+
+:MAIN
 
 @echo. 
 @echo  -- Mixer Account Tracker --
@@ -27,7 +27,13 @@ cls
 REM Insert the setup.py file location below (Make sure not to move this file)
 REM Make sure to have a recent version of python istalled [3.0 or higher]
 
+:SETUP
+
 setup.py
+
+
+:AUTORUN
+
 
 :START
 
