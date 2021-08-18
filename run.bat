@@ -2,6 +2,14 @@
 
 title Mixer - Data Dashboard
 
+if exist autorun.txt (
+goto :START
+) else (
+goto :MAIN
+)
+
+:MAIN
+
 @echo. 
 @echo  -- Mixer Account Tracker --
 @echo        Motd/Bulletin
@@ -19,7 +27,13 @@ cls
 REM Insert the setup.py file location below (Make sure not to move this file)
 REM Make sure to have a recent version of python istalled [3.0 or higher]
 
+:SETUP
+
 setup.py
+
+
+:AUTORUN
+
 
 :START
 
